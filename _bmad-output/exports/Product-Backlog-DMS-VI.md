@@ -618,79 +618,7 @@ Ma trận 4 chiều sau đây được sử dụng để khám phá một cách 
 
 ---
 
-### Danh Mục 10: Quản Lý Sức Khỏe & Camera Hệ Thống
-
-> **Mục Đích:** Giám sát sức khỏe hệ thống, trạng thái camera, và điều kiện môi trường để hoạt động đáng tin cậy.
-
----
-
-#### PBI-034: Kiểm Tra Sức Khỏe Camera IR
-
-- **Ưu Tiên:** PHẢI CÓ
-- **Mô Tả:** Giám sát kết nối camera và chất lượng hình ảnh để đảm bảo hệ thống giám sát hoạt động
-- **Công Nghệ:** Tích Hợp Phần Cứng + Thị Giác Máy Tính (xác thực khung hình)
-- **Thực Thể Được Giám Sát:** Camera/Hệ Thống
-- **Đầu Ra:** Trạng thái camera (trực tuyến/ngoại tuyến), số liệu chất lượng hình ảnh (độ sáng, độ tương phản, mờ)
-- **Phụ Thuộc:** Giao diện phần cứng (camera USB)
-- **Tiêu Chí Thành Công:**
-  - Kiểm tra kết nối camera: phát hiện mất kết nối camera trong 2 giây
-  - Xác thực khung hình: kiểm tra khung hình bị đóng băng (cùng khung >2 giây)
-  - Số liệu chất lượng hình ảnh: biểu đồ độ sáng, phát hiện mờ (phương sai Laplacian)
-  - Hiển thị cảnh báo "Camera Ngoại Tuyến" nếu camera không thành công
-  - Ghi lại lỗi camera để bảo trì
-
----
-
-#### PBI-035: Phát Hiện Ánh Sáng Yếu
-
-- **Ưu Tiên:** NÊN CÓ
-- **Mô Tả:** Phát hiện điều kiện ánh sáng không đủ ảnh hưởng đến độ chính xác phát hiện
-- **Công Nghệ:** Thị Giác Máy Tính (phân tích biểu đồ độ sáng)
-- **Thực Thể Được Giám Sát:** Camera/Hệ Thống
-- **Đầu Ra:** Mức độ ánh sáng (đủ/không đủ), thông báo cảnh báo
-- **Phụ Thuộc:** PBI-034 (kiểm tra sức khỏe camera)
-- **Tiêu Chí Thành Công:**
-  - Phân tích độ sáng: tính toán độ sáng trung bình/trung bình từ biểu đồ
-  - Ngưỡng: nếu độ sáng trung bình <30 (thang điểm 0-255) → cảnh báo "Ánh Sáng Yếu"
-  - Camera IR nên xử lý ánh sáng yếu, nhưng cảnh báo nếu chiếu sáng IR không thành công
-  - Điều chỉnh tự động: tăng phơi sáng camera nếu có thể
-
----
-
-#### PBI-036: Phát Hiện Che Khuất Khuôn Mặt
-
-- **Ưu Tiên:** NÊN CÓ
-- **Mô Tả:** Phát hiện khi khuôn mặt bị che khuất một phần (tay che mặt, vật, vị trí)
-- **Công Nghệ:** Thị Giác Máy Tính (phân tích độ tin cậy điểm mốc)
-- **Thực Thể Được Giám Sát:** Chỉ Tài Xế
-- **Đầu Ra:** Trạng thái che khuất (có/không), vùng bị che khuất (mắt, miệng, v.v.), cảnh báo
-- **Phụ Thuộc:** PBI-001 (yêu cầu điểm mốc khuôn mặt với điểm tin cậy)
-- **Tiêu Chí Thành Công:**
-  - Phát hiện che khuất: nếu >30% điểm mốc có độ tin cậy <0,5 → che khuất
-  - Xác định vùng bị che khuất: mắt, miệng, toàn bộ mặt
-  - Giảm nhẹ uyển chuyển: nếu mắt bị che khuất, quay trở lại chỉ ước tính posture đầu (PBI-006)
-  - Cảnh báo: "Mặt bị che khuất một phần" nếu che khuất >5 giây
-
----
-
-#### PBI-037: Giám Sát FPS Hệ Thống
-
-- **Ưu Tiên:** NÊN CÓ
-- **Mô Tả:** Giám sát tốc độ xử lý khung hình để đảm bảo hiệu suất theo thời gian thực
-- **Công Nghệ:** Số Liệu Hệ Thống (theo dõi time.time())
-- **Thực Thể Được Giám Sát:** Hệ Thống
-- **Đầu Ra:** Giá trị FPS, cảnh báo hiệu suất nếu dưới ngưỡng
-- **Phụ Thuộc:** Không (giám sát cấp hệ thống)
-- **Tiêu Chí Thành Công:**
-  - FPS Mục Tiêu: tối thiểu 15-20 FPS cho giám sát theo thời gian thực
-  - Tính toán FPS: trung bình lăn trong 30 khung hình
-  - Cảnh báo: nếu FPS <15 trong >5 giây → chỉ báo "Hiệu Suất Thấp"
-  - Ghi lại thả FPS để phân tích tối ưu hóa
-  - Hiển thị FPS trên bảng điều khiển (chế độ nhà phát triển)
-
----
-
-### Danh Mục 11: Hệ Thống Cảnh Báo
+### Danh Mục 10: Hệ Thống Cảnh Báo
 
 > **Mục Đích:** Gửi cảnh báo kịp thời, ưu tiên cho tài xế tại các sự kiện quan trọng.
 
@@ -745,7 +673,7 @@ Ma trận 4 chiều sau đây được sử dụng để khám phá một cách 
 
 ---
 
-### Danh Mục 12: Ghi Lại Dữ Liệu & Ghi Video
+### Danh Mục 11: Ghi Lại Dữ Liệu & Ghi Video
 
 > **Mục Đích:** Ghi lại sự kiện và video để phân tích, chịu trách nhiệm và lấy bằng chứng.
 
@@ -801,7 +729,7 @@ Ma trận 4 chiều sau đây được sử dụng để khám phá một cách 
 
 ---
 
-### Danh Mục 13: Bảng Điều Khiển & Giao Diện Người Dùng
+### Danh Mục 12: Bảng Điều Khiển & Giao Diện Người Dùng
 
 > **Mục Đích:** Giao diện giám sát thời gian thực và phân tích lịch sử cho tài xế và quản lý hạm đội.
 
@@ -879,12 +807,6 @@ Ma trận 4 chiều sau đây được sử dụng để khám phá một cách 
 - PBI-024: Phát Hiện Tay Vươn Ra Ngoài Cửa Sổ
 - PBI-025: Phát Hiện Nhìn Vào Hướng Dẫn
 - PBI-026: Huấn Luyện Mô Hình CNN Hoạt Động
-
-**Cơ Sở Hạ Tầng Hệ Thống:**
-- PBI-034: Kiểm Tra Sức Khỏe Camera IR
-- PBI-038: Cảnh Báo Âm Thanh Theo Thời Gian Thực
-- PBI-041: Ghi Lại Sự Kiện
-- PBI-044: Bảng Điều Khiển Giám Sát Trực Tiếp
 
 **Tổng Cộng:** 24 mục
 
