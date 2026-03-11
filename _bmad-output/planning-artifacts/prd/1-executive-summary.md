@@ -1,0 +1,7 @@
+# 1. Executive Summary
+
+Dự án "Hệ thống Giám sát Tài xế (DMS)" nhằm mục đích phát triển một nguyên mẫu hệ thống nhúng/IoT hoạt động trong lĩnh vực ô tô. Tầm nhìn cốt lõi là xây dựng một nguyên mẫu DMS có độ chính xác cao, có khả năng phân tích toàn diện các yếu tố trạng thái của tài xế (bao gồm buồn ngủ, mất tập trung và các hành vi nguy hiểm) trên các thiết bị phần cứng phổ thông (như Jetson Nano hoặc Raspberry Pi 4). Mục tiêu cuối cùng là chứng minh tính khả thi của việc triển khai một giải pháp giám sát tài xế hiệu quả và đáng tin cậy trong bối cảnh đồ án tốt nghiệp.
+
+Hệ thống này nổi bật không chỉ vì khả năng phát hiện buồn ngủ đơn thuần, mà bởi nó hoạt động như một công cụ đánh giá rủi ro toàn diện. Bằng cách kết hợp dữ liệu từ nhiều phân tích về trạng thái của tài xế, DMS cung cấp các cảnh báo an toàn thông minh và chính xác hơn. Điều này được thực hiện hiệu quả trên phần cứng biên (edge hardware) có chi phí thấp, cho thấy tiềm năng áp dụng rộng rãi. Insight cốt lõi là một hệ thống DMS thực sự hiệu quả đòi hỏi sự tổng hợp và phân tích đa yếu tố, thay vì chỉ dựa vào một chỉ số đơn lẻ, từ đó tạo ra một mạng lưới an toàn mạnh mẽ và đáng tin cậy hơn cho người lái xe.
+
+Dự án được phân loại là một **Hệ thống nhúng/IoT (iot_embedded)** trong **lĩnh vực ô tô (automotive)**. Mức độ phức tạp được đánh giá là **cao (high)** do các yêu cầu về hiệu suất thời gian thực, độ chính xác cao và các tiêu chuẩn an toàn. Đây là một **dự án brownfield** do có sẵn các tài liệu kiến trúc ban đầu.
