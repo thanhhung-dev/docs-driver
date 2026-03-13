@@ -41,6 +41,7 @@ projectContext: brownfield](#stepscompleted-step-01-init-step-02-discovery-step-
   - [7. Functional Requirements (Các Yêu cầu Chức năng)](./7-functional-requirements-cc-yu-cu-chc-nng.md)
     - [7.1 Quản lý Đầu vào Video](./7-functional-requirements-cc-yu-cu-chc-nng.md#71-qun-l-u-vo-video)
     - [7.2 Phát hiện và Phân tích Trạng thái Tài xế](./7-functional-requirements-cc-yu-cu-chc-nng.md#72-pht-hin-v-phn-tch-trng-thi-ti-x)
+      - [7.2.1 Phát hiện Hành vi Nguy hiểm](./7-functional-requirements-cc-yu-cu-chc-nng.md#721-pht-hin-hnh-vi-nguy-him)
     - [7.3 Quản lý Cảnh báo](./7-functional-requirements-cc-yu-cu-chc-nng.md#73-qun-l-cnh-bo)
     - [7.4 Quản lý Dữ liệu và Bằng chứng](./7-functional-requirements-cc-yu-cu-chc-nng.md#74-qun-l-d-liu-v-bng-chng)
     - [7.5 Quản lý Cấu hình](./7-functional-requirements-cc-yu-cu-chc-nng.md#75-qun-l-cu-hnh)

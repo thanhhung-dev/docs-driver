@@ -42,7 +42,7 @@ story_location: _bmad-output/implementation-artifacts
 development_status:
   # Epic 0: Foundation
   epic-0: in-progress
-  0-10-integrate-camera-system: ready-for-dev
+  0-10-integrate-camera-system: in-progress
   epic-0-retrospective: optional
 
   # Epic 1: Core Detection System  

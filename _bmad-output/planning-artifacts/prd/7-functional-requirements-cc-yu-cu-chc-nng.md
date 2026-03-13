@@ -16,10 +16,20 @@
 *   **FR9:** Hệ thống PHẢI có khả năng tổng hợp dữ liệu từ hướng đầu và hướng nhìn để đánh giá mức độ mất tập trung của tài xế.
 *   **FR10:** Hệ thống PHẢI có khả năng xác định sự kiện "ngủ gật ngắn" (microsleep) của tài xế.
 
+### 7.2.1 Phát hiện Hành vi Nguy hiểm
+
+*   **FR10.1:** Hệ thống PHẢI có khả năng phát hiện tài xế đang **sử dụng điện thoại** khi gọi điện.
+*   **FR10.2:** Hệ thống PHẢI có khả năng phát hiện tài xế đang **uống nước** từ chai/cốc.
+*   **FR10.3:** Hệ thống PHẢI có khả năng phát hiện tài xế đang **hút thuốc**.
+*   **FR10.4:** Hệ thống PHẢI có khả năng phát hiện **hành vi ngáp** như một hoạt động (bổ sung cho việc phát hiện dựa trên chỉ số).
+*   **FR10.5:** Hệ thống PHẢI có khả năng phát hiện khi **tay tài xế không đặt trên vô lăng**.
+*   **FR10.6:** Hệ thống PHẢI có khả năng phát hiện khi **tay tài xế vươn ra ngoài cửa sổ**.
+*   **FR10.7:** Hệ thống PHẢI có khả năng phát hiện tài xế đang **nhìn vào thiết bị định vị** (điện thoại/GPS).
+
 ## 7.3 Quản lý Cảnh báo
 
 *   **FR11:** Hệ thống PHẢI có khả năng kích hoạt cảnh báo sớm, nhẹ nhàng (ví dụ: tín hiệu âm thanh nhẹ, đèn LED chuyển màu) khi phát hiện dấu hiệu ban đầu của sự buồn ngủ hoặc mất tập trung.
-*   **FR12:** Hệ thống PHẢI có khả năng kích hoạt cảnh báo khẩn cấp, rõ ràng (ví dụ: âm thanh dồn dập, đèn LED nhấp nháy) khi phát hiện tình trạng nguy hiểm cao (ví dụ: ngủ gật ngắn).
+*   **FR12:** Hệ thống PHẢI có khả năng kích hoạt cảnh báo khẩn cấp, rõ ràng (ví dụ: âm thanh dồn dập, đèn LED nhấp nháy) khi phát hiện tình trạng nguy hiểm cao (ví dụ: ngủ gật ngắn hoặc các hành vi nguy hiểm).
 
 ## 7.4 Quản lý Dữ liệu và Bằng chứng
 
